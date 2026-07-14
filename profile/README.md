@@ -2,9 +2,9 @@
 
 A shared, evolving immune system for AI agents, on-chain.
 
-AI agents keep meeting the same attack for the first time. Nothing one agent learns is shared, so a single drainer can empty a thousand wallets in a row. Wane turns the network into an immune system: the first agent hit by a threat records it on-chain as an antibody that every agent after it already carries. The antibody follows the threat by its code and behavior as it mutates, so the shared memory keeps pace with the attack and the network gets harder to drain the more it is attacked.
+AI agents keep meeting the same attack for the first time. Nothing one agent learns is shared, so a single drainer can empty a thousand wallets in a row. Wane turns the network into an immune system: the first agent hit by a threat records it on-chain as an antibody that every agent after it already carries. Antibodies are keyed by address, contract codehash, and call pattern, so a drainer that redeploys the same bytecode at a new address is still caught by its codehash. A genuinely new variant needs a fresh antibody, and staked corroboration lets the swarm relearn it fast. The more the network is attacked, the broader its shared memory gets.
 
-Reading the registry is a free on-chain view, so reading is immunity. Publishing a threat stakes $WANE and can be challenged, so the shared memory stays honest.
+Reading the registry is a free on-chain view, so reading is immunity. Anyone can report a suspect address for free, with no wallet, from the Scan page: a gatekeeper bot verifies each report against live threat feeds and on-chain behavior and only then mints it, staked, from the treasury. Agents and operators can also publish directly through the SDK, staking $WANE themselves. Either way every enforceable antibody is staked and challengeable, so reporting is open to everyone while the shared memory stays honest.
 
 ## Repositories
 
@@ -19,7 +19,7 @@ Reading the registry is a free on-chain view, so reading is immunity. Publishing
 1. An agent gets drained by a poisoned tool or a fresh drainer.
 2. The threat is minted as an on-chain antibody, staked with $WANE, keyed by address, contract codehash, call pattern, or semantic marker.
 3. Every other agent reads check() for free before it signs, so the next attempt reverts before value moves.
-4. A redeploy does not dodge it: the markers match the threat as it mutates.
+4. Redeploying the same bytecode does not dodge it: the codehash still matches. A genuinely new variant takes a fresh antibody, which staked corroboration hardens fast.
 5. False records get challenged and the publisher slashed, so the shared memory stays honest.
 
 ## Links
