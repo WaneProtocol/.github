@@ -6,6 +6,8 @@ AI agents keep meeting the same attack for the first time. Nothing one agent lea
 
 Reading the registry is a free on-chain view, so reading is immunity. Anyone can report a suspect address for free, with no wallet, from the Scan page: a gatekeeper bot verifies each report against live threat feeds and on-chain behavior and only then mints it, staked, from the treasury. Agents and operators can also publish directly through the SDK, staking $WANE themselves. Either way every enforceable antibody is staked and challengeable, so reporting is open to everyone while the shared memory stays honest.
 
+CA: HesbMP8FaoUvK8uKrtg6Pf4WCiQXgFS8oQJ3tjZpump
+
 ## Repositories
 
 - [wane-base](https://github.com/WaneProtocol/wane-base) : EVM engine. Antibody registry, policy firewall, EIP-7702 delegate, and the $WANE token. Live on Base.
