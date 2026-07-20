@@ -8,9 +8,17 @@ Reading the registry is a free on-chain view, so reading is immunity. Anyone can
 
 CA: HesbMP8FaoUvK8uKrtg6Pf4WCiQXgFS8oQJ3tjZpump
 
+## Recently shipped
+
+- **Solana engine live on mainnet-beta.** Registry `5Arj4z…1wJH` and screening vault `5YK7gM…rtTYh` are deployed and executable, governor-owned, with 500 antibodies in the registry.
+- **One-RPC batch screening in the SDK.** `checkAddresses` / `assertAllSafe` screen every destination in a transaction in a single round trip instead of one call per address.
+- **Solana registry went stake-free.** A governor bot verifies each report against live feeds and on-chain behavior, then mints the antibody from the treasury, so reporting stays free and open with no token step for the reporter.
+
+Active development is on `wane-solana` and `wane-sdk`. Commits, roadmap, and open issues track what is in flight.
+
 ## Repositories
 
-- [wane-base](https://github.com/WaneProtocol/wane-base) : EVM engine. Antibody registry, policy firewall, EIP-7702 delegate, and the $WANE token. Live on Base.
+- [wane-base](https://github.com/WaneProtocol/wane-base) : EVM engine. Antibody registry, policy firewall, and EIP-7702 delegate. Live on Base.
 - [wane-solana](https://github.com/WaneProtocol/wane-solana) : Solana engine. Antibody registry plus a non-custodial screening session vault.
 - [wane-vault](https://github.com/WaneProtocol/wane-vault) : Non-custodial screening smart wallet. Funds stay in-contract and every send is checked before value moves.
 - [wane-sdk](https://github.com/WaneProtocol/wane-sdk) : Unified TypeScript client for Base and Solana. Read the registry, report threats, drive a session wallet.
